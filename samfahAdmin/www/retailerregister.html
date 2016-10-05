@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="myApp">
+
+    <ion-pane>
+      <ion-header-bar align-title="center" class="bar-positive">
+        <div class="buttons">
+          <a href="index.html"><button class="button">Back</button></a>
+        </div>
+        <h1 class="title">Retailer Register Form</h1>
+      </ion-header-bar>
+      <ion-content ng-controller="FormController">
+        <form name="myForm" novalidate>
+          <div class="list">
+            <label class="item item-input">
+                <span class="input-label">First Name*</span>
+                <input type="text" name="firstname" ng-model="firstname" ng-minlength="5" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Last Name*</span>
+                <input type="text" name="lastname" ng-model="lastname" ng-minlength="2" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Email*</span>
+                <input type="email" name="email" ng-model="email" ng-minlength="5" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password*</span>
+                <input type="text" name="password" ng-model="password" ng-minlength="8" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Business Name*</span>
+                <input type="text" name="businessname" ng-model="businessname" ng-minlength="5" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Business Sector*</span>
+                <input type="text" name="businesssector" ng-model="businesssector" ng-minlength="5" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Annual Turnover*</span>
+                <input type="text" name="annualturnover" ng-model="annualturnover" ng-minlength="5" required>
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Telephone*</span>
+              <input type="tel" name="tel" ng-model="tel" ng-minlength="10" required>
+            </label>
+          </div>
+          <div class="padding">
+            <p ng-show="myForm.firstname.$error.required">* First name is required</p>
+            <p ng-show="myForm.firstname.$error.minlength">* First name must be longer than 5 characters</p>
+            <p ng-show="myForm.lastname.$error.required">* Last name is required</p>
+            <p ng-show="myForm.lastname.$error.minlength">* Last name must be longer than 2 characters</p>
+            <p ng-show="myForm.email.$error.required">* Email is required</p>
+            <p ng-show="myForm.email.$invalid && !myForm.email.$pristine">* Email must be contain "@"</p>
+            <p ng-show="myForm.email.$error.minlength">* Email must be longer than 5 characters</p>
+            <p ng-show="myForm.businessname.$error.required">* Business name is required</p>
+            <p ng-show="myForm.businessname.$error.minlength">* Business name must be longer than 5 characters</p>
+            <p ng-show="myForm.businesssector.$error.required">* Business sector is required</p>
+            <p ng-show="myForm.businesssector.$error.minlength">* Business sector must be longer than 5 characters</p>
+            <p ng-show="myForm.annualturnover.$error.required">* Annual turnover is required</p>
+            <p ng-show="myForm.annualturnover.$error.minlength">* Annual turnover must be longer than 5 characters</p>
+            <p ng-show="myForm.tel.$error.required">* Telephone is required</p>
+            <p ng-show="myForm.tel.$error.minlength">* Telephone must be longer than 10 characters</p>
+            <p ng-show="myForm.password.$error.required">* Password is required</p>
+            <p ng-show="myForm.password.$error.minlength">* Password must be longer than 8 characters</p>
+          </div>
+          <div class="padding">
+            <button type="button" class="button button-block button-positive" ng-disabled="myForm.$invalid" ng-click="submit(form)">Submit</button>
+          </div>
+
+        </form>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
