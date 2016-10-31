@@ -1,0 +1,63 @@
+body {
+    background-color : rebeccapurple;
+    color : azure;
+}
+
+#banner, #product {
+    text-align : center;
+	display: block;
+    margin: 0 auto;
+}
+
+div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar {
+    background-color : black ;
+    border : solid;
+    border-color : black;
+    color : azure;
+    text-align : center;
+    font-size : 16px;
+    transition-duration : 0.5s;
+}
+
+ul {
+    list-style-type : none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color : black;
+}
+
+li {
+    float : left;
+}
+
+li a {
+    display: block;
+    color: azure;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color : azure;
+    color : black;
+}
+
+h3.title{
+    color: aqua;
+}
+
+.jumbotron{
+    background-color: #273861;
+}
+
+fieldset{
+    background-color: white;
+    color: black;
+}

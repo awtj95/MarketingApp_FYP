@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="galleria/galleria.classic.css">
+        <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+        <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+
+        <style>
+            @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
+        <script type="application/javascript" src="js/index_init_services.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/ionic_subpage.js"></script>
+        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="galleria/galleria-1.3.6.min.js"></script>
+        <script type="application/javascript" src="galleria/galleria.classic.min.js"></script>
+        <script type="application/javascript" src="galleria/galleria-startup.js"></script>
+    </head>
+
+    <body ng-app="myApp">
+
+        <div class="upage" id="mainpage">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_4_10">
+
+                    <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col center">
+                                <div class="tarea widget uib_w_48 d-margins" data-uib="media/text" data-ver="0" name="uib_w_48">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <h2>Samfah Marketing</h2>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                    <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="button widget uib_w_45 d-margins ion ion-android-contact" data-uib="ionic/button" data-ver="0" id="signin">Login</button>
+
+                                <button class="button widget uib_w_44 d-margins ion ion-android-add" data-uib="ionic/button" data-ver="0" id="register">Register</button>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_1 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                    <h1 class="title">Welcome</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+        <div class="upage hidden" id="register_form">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_75_8">
+                    <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+                        <form class="registration-form">
+                            <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+                                <div class="widget-container content-area vertical-col">
+                                    <label class="item item-input item-select widget uib_w_33 d-margins" data-uib="ionic/select" data-ver="0">
+                                        <div class="input-label">Title</div>
+                                        <select>
+                                            <option>Please select</option>
+                                            <option>Mr</option>
+                                            <option>Mrs</option>
+                                            <option>Ms</option>
+                                            <option>Miss</option>
+                                        </select>
+                                    </label>
+                                    <label class="item item-input widget uib_w_34 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Name</span>
+                                        <input type="text" placeholder="Your Name">
+                                    </label>
+                                    <label class="item item-input widget uib_w_35 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Email</span>
+                                        <input type="text" placeholder="Company Email">
+                                    </label>
+                                    <label class="item item-input widget uib_w_36 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Password</span>
+                                        <input type="password" placeholder="Password">
+                                    </label>
+                                    <label class="item item-input widget uib_w_43 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Re-password</span>
+                                        <input type="password" placeholder="Re-type Password">
+                                    </label>
+                                    <label class="item item-input widget uib_w_37 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Company</span>
+                                        <input type="text" placeholder="Business Name">
+                                    </label>
+                                    <label class="item item-input widget uib_w_38 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Contact</span>
+                                        <input type="tel" placeholder="Handphone Number">
+                                    </label>
+                                    <label class="item item-input widget uib_w_42 d-margins" data-uib="ionic/textarea" data-ver="0">
+                                        <textarea placeholder="Company Description" rows="5" wrap="soft"></textarea>
+                                    </label>
+                                    <li class="item item-checkbox widget uib_w_46 d-margins" data-uib="ionic/checkbox" data-ver="0">
+                                        <label class="checkbox">
+                                            <input type="checkbox">
+                                        </label>Agree our term &amp; condition</li>
+                                    <button class="button widget uib_w_39 d-margins button-small button-calm" data-uib="ionic/button" data-ver="0" id="submit" type="submit">Submit</button>
+                                    <button class="button widget uib_w_41 d-margins button-small button-calm" data-uib="ionic/button" data-ver="0" type="reset">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_5 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_47 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0" id="back"></button>
+                    </div>
+                    <h1 class="title">Register</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+        <div class="upage hidden" id="register_message">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_99_58">
+                    <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_5 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col center">
+                                <div class="tarea widget uib_w_50 d-margins" data-uib="media/text" data-ver="0" name="uib_w_50">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <h3><em><strong>Information Submitted</strong></em></h3>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                    <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_6 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="tarea widget uib_w_51 d-margins" data-uib="media/text" data-ver="0" name="uib_w_51">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <p><strong><em>Thank for choosing our app. We had received you register request and will process it as soon as possible. If got any information missing, we will contact you through email or call.</em></strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+
+                    <div class="widget uib_w_52 scale-image d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/success.jpg">
+
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div>
+                    <button class="button widget uib_w_53 d-margins ion button-small button-calm" data-uib="ionic/button" data-ver="0" id="back">Back to Home</button>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_49 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                    <h1 class="title">Register</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+        <div class="upage hidden" id="main_menu">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_75_8">
+                    <div class="grid grid-pad urow uib_row_5 row-height-5" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="galleria image-gallery-size widget uib_w_67 d-margins" data-uib="media/image_gallery" data-ver="0" data-sm-trigger="true" images-json="gallery_images/gallery_images.json">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                    <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_19 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <button class="button widget uib_w_75 d-margins ion ion-android-contact" data-uib="ionic/button" data-ver="0" id="profile">View Profile</button>
+                                <button class="button widget uib_w_68 d-margins ion ion-android-add" data-uib="ionic/button" data-ver="0" id="addproduct">Add New Product</button>
+                                <button class="button widget uib_w_69 d-margins ion ion-android-promotion" data-uib="ionic/button" data-ver="0" id="addpromotion">Add New Promotion</button>
+                                <button class="button widget uib_w_70 d-margins ion ion-android-contacts" data-uib="ionic/button" data-ver="0" id="userlogin">View User Login</button>
+                                <button class="button widget uib_w_72 d-margins ion ion-android-note" data-uib="ionic/button" data-ver="0" id="productlist">Product List</button>
+                                <button class="button widget uib_w_73 d-margins ion ion-android-note" data-uib="ionic/button" data-ver="0" id="promotionlist">Promotion List</button>
+                                <button class="button widget uib_w_74 d-margins ion ion-android-forums" data-uib="ionic/button" data-ver="0">Send Notification</button>
+                                <button class="button widget uib_w_71 d-margins ion ion-android-settings" data-uib="ionic/button" data-ver="0" id="setting">Setting</button>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_5 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_66 d-margins ion ion-android-more" data-uib="ionic/button" data-ver="0" id="sidemenu"></button>
+
+                    </div>
+                    <h1 class="title">Menu</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_47 d-margins ion ion-log-out" data-uib="ionic/button" data-ver="0" id="logout"></button>
+                    </div>
+                </ion-header-bar>
+
+                <div class="inner-element uib_w_56 uib_sidebar leftbar bar-bg thumb-bg bar-gutter swipe" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200}">
+
+                    <div class="sidebar-content content-area vertical-col">
+
+                        <button class="button widget uib_w_58 d-margins ion ion-home" data-uib="ionic/button" data-ver="0" id="home">Home</button>
+                        <button class="button widget uib_w_59 d-margins ion ion-android-add" data-uib="ionic/button" data-ver="0" id="addproduct">Product</button>
+                        <button class="button widget uib_w_63 d-margins ion ion-android-note" data-uib="ionic/button" data-ver="0" id="productlist">Product List</button>
+                        <button class="button widget uib_w_60 d-margins ion ion-android-promotion" data-uib="ionic/button" data-ver="0" id="addpromotion">Promotion</button>
+                        <button class="button widget uib_w_64 d-margins ion ion-android-note" data-uib="ionic/button" data-ver="0" id="promotionlist">Promotion List</button>
+                        <button class="button widget uib_w_61 d-margins ion ion-android-contacts" data-uib="ionic/button" data-ver="0" id="userlogin">User Login</button>
+                        <button class="button widget uib_w_62 d-margins ion ion-android-settings" data-uib="ionic/button" data-ver="0" id="account">Account</button>
+                        <button class="button widget uib_w_65 d-margins ion ion-log-out" data-uib="ionic/button" data-ver="0" id="logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="upage hidden" id="login_page">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_17_51">
+                    <div class="grid grid-pad urow uib_row_6 row-height-6" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_20 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col center">
+                                <div class="tarea widget uib_w_77 d-margins" data-uib="media/text" data-ver="0" name="uib_w_77">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div class="text-container">
+                                        <h2><strong>Welcome​</strong></h2>
+                                    </div>
+                                </div>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                    <div class="grid grid-pad urow uib_row_7 row-height-7" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_21 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <label class="item item-input widget uib_w_78 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Username</span>
+                                    <i class="icon ion-android-social-user ion placeholder-icon"></i>
+                                    <input type="text" placeholder="User ID">
+                                </label>
+                                <label class="item item-input widget uib_w_79 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Password</span>
+                                    <i class="icon placeholder-icon ion-key ion"></i>
+                                    <input type="password" placeholder="Password">
+                                </label>
+                                <button class="button widget uib_w_80 d-margins" data-uib="ionic/button" data-ver="0" id="login">Login</button>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_76 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                    <h1 class="title">Login</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+
+        <div class="upage hidden" id="promotion_list">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_51_30">
+                    <div class="grid grid-pad urow uib_row_9 row-height-9" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_27 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <ion-list class="widget uib_w_92 d-margins" data-uib="ionic/list" data-ver="0">
+                                    <ion-item class="item widget uib_w_93" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                    <ion-item class="item widget uib_w_94" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                    <ion-item class="item widget uib_w_95" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                    <ion-item class="item widget uib_w_98 d-margins" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                </ion-list>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_85 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_112 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0" id="back"></button>
+                    </div>
+                    <h1 class="title">Promotion List</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+        <div class="upage hidden" id="product_list">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_52_72">
+                    <div class="grid grid-pad urow uib_row_11 row-height-11" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_29 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <ion-list class="widget uib_w_104 d-margins" data-uib="ionic/list" data-ver="0">
+                                    <ion-item class="item widget uib_w_105" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                    <ion-item class="item widget uib_w_106" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                    <ion-item class="item widget uib_w_107" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                </ion-list>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_84 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_111 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0" id="back"></button>
+                    </div>
+                    <h1 class="title">Product List</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+        <div class="upage hidden" id="user_login">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_53_25">
+                    <div class="grid grid-pad urow uib_row_10 row-height-10" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_28 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <ion-list class="widget uib_w_99 d-margins" data-uib="ionic/list" data-ver="0">
+                                    <ion-item class="item widget uib_w_100" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                    <ion-item class="item widget uib_w_101" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                    <ion-item class="item widget uib_w_102" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                    <ion-item class="item widget uib_w_103 d-margins" data-uib="ionic/list_item" data-ver="0">List item</ion-item>
+                                </ion-list>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_83 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_110 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0" id="back"></button>
+                    </div>
+                    <h1 class="title">User Login</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+        <div class="upage hidden" id="add_product">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_27_46">
+                    <div class="grid grid-pad urow uib_row_13 row-height-13" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_31 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="widget uib_w_122 scale-image d-margins" data-uib="media/img" data-ver="0">
+                                    <figure class="figure-align">
+                                        <img src="images/Strabburg.jpg">
+                                        <figcaption data-position="bottom"></figcaption>
+                                    </figure>
+                                </div>
+                                <button class="button widget uib_w_123 d-margins button-small" data-uib="ionic/button" data-ver="0" id="selectpic">Select Picture</button>
+                                <label class="item item-input widget uib_w_119 d-margins" data-uib="ionic/textarea" data-ver="0">
+                                    <textarea placeholder="Product Description" rows="5" wrap="soft"></textarea>
+                                </label>
+                                <label class="item item-input widget uib_w_120 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Price</span>
+                                    <input type="text" placeholder="RM 0.00">
+                                </label>
+                                <button class="button widget uib_w_121 d-margins ion button-small button-calm ion-ios7-upload-outline" data-uib="ionic/button" data-ver="0">Upload</button>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_89 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_109 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0" id="back"></button>
+                    </div>
+                    <h1 class="title">New Product</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+        <div class="upage hidden" id="add_promotion">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_28_51">
+                    <div class="grid grid-pad urow uib_row_8 row-height-8" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_26 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <label class="item item-input widget uib_w_90 d-margins" data-uib="ionic/textarea" data-ver="0">
+                                    <textarea placeholder="Add promotion detail" rows="7" wrap="soft"></textarea>
+                                </label>
+                                <button class="button widget uib_w_91 d-margins ion button-small button-calm ion-ios7-upload-outline" data-uib="ionic/button" data-ver="0">Upload Promotion</button>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_88 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_108 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0" id="back"></button>
+                    </div>
+                    <h1 class="title">New Promotion</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+        <div class="upage hidden" id="setting_page">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_89_7">
+                    <div class="grid grid-pad urow uib_row_12 row-height-12" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_30 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <label class="item item-input widget uib_w_34 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Name</span>
+                                    <input type="text" placeholder="Your Name">
+                                </label>
+                                <label class="item item-input widget uib_w_35 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Email</span>
+                                    <input type="text" placeholder="Company Email">
+                                </label>
+                                <label class="item item-input widget uib_w_36 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Password</span>
+                                    <input type="password" placeholder="Password">
+                                </label>
+                                <label class="item item-input widget uib_w_37 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Company</span>
+                                    <input type="text" placeholder="Business Name">
+                                </label>
+                                <label class="item item-input widget uib_w_38 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Contact</span>
+                                    <input type="tel" placeholder="Handphone Number">
+                                </label>
+                                <label class="item item-input widget uib_w_42 d-margins" data-uib="ionic/textarea" data-ver="0">
+                                    <textarea placeholder="Company Description" rows="5" wrap="soft"></textarea>
+                                </label>
+                                <label class="item item-input widget uib_w_117 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Longitude</span>
+                                    <input type="text" placeholder="shop longitude">
+                                </label>
+                                <label class="item item-input widget uib_w_118 d-margins" data-uib="ionic/input" data-ver="0"><span class="input-label">Latitude </span>
+                                    <input type="text" placeholder="shop latitude ">
+                                </label>
+                                <button class="button widget uib_w_39 d-margins button-small button-calm" data-uib="ionic/button" data-ver="0" id="update">Update</button>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_115 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_116 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0" id="back"></button>
+                    </div>
+                    <h1 class="title">Setting</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+        <div class="upage hidden" id="view_profile">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_71_74">
+                    <div class="grid grid-pad urow uib_row_14 row-height-14" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_32 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+                                <div class="sbs-container widget uib_w_126 d-margins" data-uib="layout/side_by_side" data-ver="0">
+                                    <div class="leftContent widget-container">
+                                        <div class="widget uib_w_127 scale-image d-margins" data-uib="media/img" data-ver="0">
+                                            <figure class="figure-align">
+                                                <img src="images/Strabburg.jpg">
+
+                                                <figcaption data-position="bottom"></figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="rightContent widget-container">
+                                        <div class="tarea widget uib_w_128 d-margins" data-uib="media/text" data-ver="0" name="uib_w_128">
+                                            <div class="widget-container left-receptacle"></div>
+                                            <div class="widget-container right-receptacle"></div>
+                                            <div class="text-container">
+                                                <p>shop name</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ion-item class="item widget uib_w_130 item-avatar d-margins" data-uib="ionic/list_item_avatar" data-ver="0">
+                                    <img src="images/Strabburg.jpg">
+                                    <h2>Heading</h2>
+                                    <p>Secondary Text</p>
+                                </ion-item>
+                                <ion-item class="item widget uib_w_132 d-margins item-avatar" data-uib="ionic/list_item_avatar" data-ver="0">
+                                    <img src="images/Strabburg.jpg">
+                                    <h2>Heading</h2>
+                                    <p>Secondary Text</p>
+                                </ion-item>
+                                <ion-item class="item widget uib_w_131 item-avatar d-margins" data-uib="ionic/list_item_avatar" data-ver="0">
+                                    <img src="images/Strabburg.jpg">
+                                    <h2>Heading</h2>
+                                    <p>Secondary Text</p>
+                                </ion-item>
+                                <span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <ion-header-bar class="bar inner-element uib_w_124 bar-positive bar-header" data-uib="ionic/header" data-ver="0" align-title="center">
+                    <div class="buttons widget-container content-area horiz-area wrapping-col">
+                        <button class="button widget uib_w_125 d-margins ion ion-android-arrow-back" data-uib="ionic/button" data-ver="0" id="back"></button>
+                    </div>
+                    <h1 class="title">Profile</h1>
+                    <div class="buttons widget-container content-area horiz-area wrapping-col"></div>
+                </ion-header-bar>
+            </div>
+        </div>
+
+    </body>
+
+</html>
