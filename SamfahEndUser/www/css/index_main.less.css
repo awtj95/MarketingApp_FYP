@@ -315,7 +315,7 @@ body#afui .splt {
 }
 @media all and (min-width: 320px) {
   .row-height-1 > .col > .content-area {
-    min-height: 100px;
+    min-height: 46px;
   }
 }
 .left-receptacle {
@@ -611,7 +611,7 @@ body#afui .splt {
 }
 @media all and (min-width: 320px) {
   .row-height-4 > .col > .content-area {
-    min-height: 100px;
+    min-height: 38px;
   }
 }
 .uib_row_5:not(.cright) > .col {
@@ -731,5 +731,33 @@ body#afui .splt {
     padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
+  }
+}
+@media all {
+  .maps-size {
+    height: 250px;
+  }
+}
+.uib_row_9:not(.cright) > .col {
+  padding-right: 20px;
+}
+.uib_row_9.cright > .col {
+  padding-left: 20px;
+}
+@media all {
+  .col-0_12-12 {
+    width: auto;
+    float: none !important;
+  }
+  .urow:not(.cright) > .col-0_12-12 {
+    padding-right: 0px !important;
+  }
+  .urow.cright > .col-0_12-12 {
+    padding-left: 0px !important;
+  }
+}
+@media all and (min-width: 320px) {
+  .row-height-9 > .col > .content-area {
+    min-height: 100px;
   }
 }

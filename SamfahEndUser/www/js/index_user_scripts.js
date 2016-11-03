@@ -94,6 +94,15 @@
          uib_sb.toggle_sidebar($(".uib_w_33"));  
          return false;
     });
+            
+
+        /* button  #search */
+    $(document).on("click", "#search", function(evt)
+    {
+         /*global activate_page */
+         activate_page("#search_retailer"); 
+        
+    });
     
     }
  document.addEventListener("app.Ready", register_event_handlers, false);
