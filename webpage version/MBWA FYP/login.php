@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>About Us</title>
+        <title>Login</title>
         <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Bootstrap -->
         <link href="frameworks/css/bootstrap.min.css" rel="stylesheet" />
@@ -19,21 +19,14 @@
                 <div class="col-sm-9" id="banner">
                     <h1>Welcome to Samfah Marketing</h1>
                 </div>
-                <div class="col-sm-3">
-                    <a href="register.html"><input type="button" value="Register"></a>
-                    <a href="login.html"><input type="button" value="Login"></a>
-                </div>
+                <?php
+                    include("nav.php");
+                ?>
             </div>
             <div class="row">
-                <div class="col-sm-8 ">
-                    <ul class="navbar" id="navbar">
-                        <li><a href="main_page.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="joinus.html">Join Us</a></li>
-                        <li><a href="shop.html">Available Shops</a></li>
-                        <li><a href="promotion.html">Promotion</a></li>
-                    </ul>
-                </div>
+                <?php
+                    include("header.php");
+                ?>
                 <div> 
                     <form class="navbar-form navbar-right" role="search"> 
                         <div class="form-group"> 
@@ -44,21 +37,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
-                    <p><img src="image/aboutus.jpg" alt="about" id="about" class="img-rounded" height="300" width="920"></p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3 class="title">ABOUT US</h3>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-sm-12 jumbotron">
-                    <p class="text-center">The Samfah Marketing application offers a platform for users and retailers alike to do marketing business on the go by using GPS! Consumers will now be able to find the their favourite shops within walking distance. Retailers are able to promote their business as well. A win for everyone!</p>
+                    <div class="form" align="center">
+                        <form class="login-form">
+                            <input type="text" placeholder="username" name="uname" required/><br>
+                            <input type="password" placeholder="password" name="psw" required/>
+                            <p class="text-center"><a href="#loginhome" class="btn btn-default" role="button">Login</a></p>
+                            <p class="text-center">Don't have an account? <a href="userform.php" class="btn btn-default" role="button">Register here.</a></p>
+                        </form>
+                    </div> 
                 </div>
             </div>
-            
             <div class="row">
                 <div class="col-sm-12">
                     <p>Copyright  2016 Sam Fah Enterprise (M) Sdn Bhd (368258-H). All rights reserved.</p>

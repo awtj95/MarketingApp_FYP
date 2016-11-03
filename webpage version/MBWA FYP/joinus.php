@@ -19,21 +19,14 @@
                 <div class="col-sm-9" id="banner">
                     <h1>Welcome to Samfah Marketing</h1>
                 </div>
-                <div class="col-sm-3">
-                    <a href="register.html"><input type="button" value="Register"></a>
-                    <a href="#login"><input type="button" value="Login"></a>
-                </div>
+                <?php
+                    include("nav.php");
+                ?>
             </div>
             <div class="row">
-                <div class="col-sm-8 ">
-                    <ul class="navbar" id="navbar">
-                        <li><a href="main_page.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="joinus.html">Join Us</a></li>
-                        <li><a href="shop.html">Available Shops</a></li>
-                        <li><a href="promotion.html">Promotion</a></li>
-                    </ul>
-                </div>
+                <?php
+                    include("header.php");
+                ?>
                 <div> 
                     <form class="navbar-form navbar-right" role="search"> 
                         <div class="form-group"> 
@@ -71,9 +64,9 @@
             <div class="row">
                 <div class="col-sm-12 jumbotron">
                     <p class="text-center">Click the register button on below and fill out the registeration form. If you are register a retailer account, we respond your request as soon as possible. If end user account, you can start your shopping now!!! </p>
-                    <p class="text-center"><a href="retailerform.html" class="btn btn-default" role="button">Sign up</a><strong>  Retailer account</strong></p>
+                    <p class="text-center"><a href="retailerform.php" class="btn btn-default" role="button">Sign up</a><strong>  Retailer account</strong></p>
                     <p class="text-center">Or</p>
-                    <p class="text-center"><a href="userform.html" class="btn btn-default" role="button">Sign up</a><strong>  End User account</strong></p>  
+                    <p class="text-center"><a href="userform.php" class="btn btn-default" role="button">Sign up</a><strong>  End User account</strong></p>  
                 </div>
             </div>
             <div class="row">

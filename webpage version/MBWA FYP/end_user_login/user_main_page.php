@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Retailer Main Page</title>
+        <title>User Main Page</title>
         <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Bootstrap -->
         <link href="../frameworks/css/bootstrap.min.css" rel="stylesheet" />
@@ -19,25 +19,14 @@
                 <div class="col-sm-8" id="banner">
                     <h1>Welcome to Samfah Marketing</h1>
                 </div>
-                <div class="col-sm-2">
-                    <font color="lightblue"><u><p align="right">Welcome, Clarks</p></u></font>
-                </div>
-                <div class="col-sm-2">
-                    <a href="../main_page.html"><input type="button" value="Logout"></a>
-                </div>
+                <?php
+                    include ("loginstatus.php")
+                ?>
             </div>
             <div class="row">
-                <div class="col-sm-9 ">
-                    <ul class="navbar" id="navbar">
-                        <li><a href="../main_page.html">Home</a></li>
-                        <li><a href="#Product">Product</a></li>
-                        <li><a href="#Offer">Offer</a></li>
-                        <li><a href="#Upload">Upload New Product</a></li>
-                        <li><a href="#record">Sale Record</a></li>
-                        <li><a href="#connect">Connected User</a></li>
-                        <li><a href="#layout">Page Layout</a></li>
-                    </ul>
-                </div>
+                <?php
+                    include("header.php");
+                ?>
                 <div clas="col-sm-3"> 
                     <form class="navbar-form navbar-right" role="search"> 
                         <div class="form-group"> 
@@ -49,30 +38,30 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <a href="../main_page.html"><img src="../image/Wholsale.png" alt="banner" id="banner" class="img-rounded" height="450" width="1080" /></a>
+                    <a href="../main_page.php"><img src="../image/Wholsale.png" alt="banner" id="banner" class="img-rounded" height="450" width="1080" /></a>
                 </div>
             </div>
             <div class="row">
                 <div class="row">
                     <div class="col-sm-4">
-                        <a href="../empty.html"><img src="../image/club.jpg" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
+                        <a href="../empty.php"><img src="../image/club.jpg" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="../empty.html"><img src="../image/eshop.png" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
+                        <a href="../empty.php"><img src="../image/eshop.png" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="../empty.html"><img src="../image/vouchers.jpg" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
+                        <a href="../empty.php"><img src="../image/vouchers.jpg" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <a href="../empty.html"><img src="../image/stationery.png" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
+                        <a href="../empty.php"><img src="../image/stationery.png" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="../empty.html"><img src="../image/books.png" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
+                        <a href="../empty.php"><img src="../image/books.png" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
                     </div>
                     <div class="col-sm-4">
-                        <a href="../empty.html"><img src="../image/centre.png" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
+                        <a href="../empty.php"><img src="../image/centre.png" alt="product" id="product" class="img-thumbnail" height="250" width="250" /></a>
                     </div>
                 </div>
             </div>

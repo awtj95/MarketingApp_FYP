@@ -1,3 +1,22 @@
+<?php
+	$dbServer = 'localhost';
+	$dbUserName = 'root';
+	$dbPassword = '';
+	$dbName = 'samfah';
+
+	// Connect to server.
+	$dbConnection = @mysql_connect($dbServer,$dbUserName,$dbPassword);
+		if($dbConnection === FALSE){
+			echo "<p>Unable to connect to the database server.<br /> Error Code ". mysql_errno().":". mysql_error()."</p>";
+		}else {
+            
+	}
+
+	// Select database.
+	if(mysql_select_db($dbName, $dbConnection) === FALSE){
+			echo "<p>The database is not created.</p>";
+		}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,21 +38,14 @@
                 <div class="col-sm-9" id="banner">
                     <h1><font color="black">Welcome to Samfah Marketing</font></h1>
                 </div>
-                <div class="col-sm-3">
-                    <a href="register.html"><input type="button" value="Register"></a>
-                    <a href="#login"><input type="button" value="Login"></a>
-                </div>
+                <?php
+                    include("nav.php");
+                ?>
             </div>
             <div class="row">
-                <div class="col-sm-8 ">
-                    <ul class="navbar" id="navbar">
-                        <li><a href="main_page.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="joinus.html">Join Us</a></li>
-                        <li><a href="shop.html">Available Shops</a></li>
-                        <li><a href="promotion.html">Promotion</a></li>
-                    </ul>
-                </div>
+                <?php
+                    include("header.php");
+                ?>
                 <div> 
                     <form class="navbar-form navbar-right" role="search"> 
                         <div class="form-group"> 
@@ -43,7 +55,37 @@
                     </form>
                 </div>
             </div>
-            <form action="usersuccess.html">
+            <?php
+                if(isset($_POST['BSubmit']))	
+                {
+                    $Firstname= $_POST['firstname']; 
+                    $Lastname= $_POST['lastname']; 
+                    $Email= $_POST['email'];
+                    $Password= $_POST['password']; 
+                    $Gender= $_POST['gender']; 
+                    $Contact= $_POST['contact']; 
+                    $Description= $_POST['description'];
+
+                    echo"<br><br>";
+
+                    //insert the data into stock_item table
+                    $sql = "INSERT INTO user_list (firstname, lastname, email, password, gender, contact, description)
+                    VALUES ('$Firstname', '$Lastname', '$Email', '$Password', '$Gender', '$Contact', '$Description')";
+
+                    $sqlResult = @mysql_query($sql, $dbConnection);
+                    if ($sqlResult === TRUE) {
+                        ?>
+                            <script type="text/javascript">
+                                alert("Register Successful");
+                                window.location.href = "usersuccess.php";
+                            </script>
+                        <?php
+                    } else {
+                        echo "<p>Unable to insert data. Error Code ". mysql_errno($dbConnection).":". mysql_error($dbConnection)."</p>";
+                    }
+                }
+            ?> 
+            <form action="userform.php" method="post">
                 <div class="row">
                     <div class="col-sm-12">
                         <fieldset>
@@ -62,35 +104,34 @@
                                 </p>
                                 <p>
                                     <label for="lastname">Last Name*</label>
-                                    <input type="text" name="lastname" id="lastname" maxlength="50" size="15" placeholder="Last Name" />
+                                    <input type="text" name="lastname" id="lastname" maxlength="50" size="15" placeholder="Last Name" required="required"/>
                                 </p>
                                 <p>
                                     <label for="email">Email*</label>
-                                    <input type="email" name="email" id="email" placeholder="name@domain.com" />
+                                    <input type="email" name="email" id="email" placeholder="name@domain.com" required="required"/>
                                 </p>
                                 <p>
                                     <label for="password">Password*</label>
-                                    <input type="password" name="password" id="password" />
+                                    <input type="password" name="password" id="password" required="required"/>
                                 </p>
                                 
                                 <p>
                                     <label id="gender">Gender</label>
-                                </p>
-                                <p>
-                                    <label for="male">Male</label>
-                                    <input type="radio" id="male" name="male" value="male" />
-                                    <label for="female">Female</label>
-                                    <input type="radio" id="female" name="female" value="female" />
+                                    <input type="text" name="gender" id="gender" maxlength="6" size="15" placeholder="Gender" required="required"/>
                                 </p>
                                 <p>
                                     <label for="contact">Contact Number*</label>
-                                    <input type="tel" name="contact" id="contact" placeholder="###-########" />
+                                    <input type="tel" name="contact" id="contact" placeholder="###-########" required="required"/>
+                                </p>
+                                <p>	
+                                    <label>Description</label><br />
+                                    <textarea name="description" rows="8" cols="50" placeholder="Descript yourself" required="required"></textarea>
                                 </p>
                         </fieldset>
                         <font color="black">
-                            <a href="joinus.html"><input type="button" value="Back"></a>
+                            <a href="joinus.php"><input type="button" value="Back"></a>
                             <input type="reset" value="Reset" />
-                            <input type="submit" value="Register" />
+                            <input type="submit" name="BSubmit" value="Register" />
                         </font>
                     </div>
                 </div>

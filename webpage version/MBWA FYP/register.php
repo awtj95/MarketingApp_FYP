@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>User Successful</title>
+        <title>Register</title>
         <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Bootstrap -->
         <link href="frameworks/css/bootstrap.min.css" rel="stylesheet" />
@@ -19,21 +19,14 @@
                 <div class="col-sm-9" id="banner">
                     <h1>Welcome to Samfah Marketing</h1>
                 </div>
-                <div class="col-sm-3">
-                    <a href="register.html"><input type="button" value="Register"></a>
-                    <a href="#login"><input type="button" value="Login"></a>
-                </div>
+                <?php
+                    include("nav.php");
+                ?>
             </div>
             <div class="row">
-                <div class="col-sm-8 ">
-                    <ul class="navbar" id="navbar">
-                        <li><a href="main_page.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="joinus.html">Join Us</a></li>
-                        <li><a href="shop.html">Available Shops</a></li>
-                        <li><a href="promotion.html">Promotion</a></li>
-                    </ul>
-                </div>
+                <?php
+                    include("header.php");
+                ?>
                 <div> 
                     <form class="navbar-form navbar-right" role="search"> 
                         <div class="form-group"> 
@@ -45,9 +38,11 @@
             </div>
             <div class="row">
                 <div class="col-sm-12 jumbotron">
-                    <p class="text-center">Register Successful</p>
-                    <p class="text-center">Thank for join our Samfah marketing, your account have been actived. You can enjoy your new shopping experience now. Have a nice day!!!</p>
-                    <p class="text-center"><a href="main_page.html" class="btn btn-default" role="button">Back to Home</a></p>
+                    <p class="text-center"><strong>Retailer account</strong></p>
+                    <p class="text-center"><a href="retailerform.php" class="btn btn-default" role="button">Sign up</a></p>
+                    <p class="text-center">Or</p>
+                    <p class="text-center"><strong>End User account</strong></p>
+                    <p class="text-center"><a href="userform.php" class="btn btn-default" role="button">Sign up</a></p>  
                 </div>
             </div>
             <div class="row">

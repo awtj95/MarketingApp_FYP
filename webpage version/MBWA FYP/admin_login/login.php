@@ -4,14 +4,14 @@
         <title>Login</title>
         <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Bootstrap -->
-        <link href="frameworks/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../frameworks/css/bootstrap.min.css" rel="stylesheet" />
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
             <script src="js/html5shiv.js"></script>
             <script src="js/respond.min.js"></script>
         <![endif]-->
-        <link href="frameworks/css/market_website.css" rel="stylesheet" />
+        <link href="../frameworks/css/market_website.css" rel="stylesheet" />
     </head>
     <body>
         <div class="container">
@@ -19,21 +19,14 @@
                 <div class="col-sm-9" id="banner">
                     <h1>Welcome to Samfah Marketing</h1>
                 </div>
-                <div class="col-sm-3">
-                    <a href="register.html"><input type="button" value="Register"></a>
-                    <a href="login.html"><input type="button" value="Login"></a>
-                </div>
+                <?php
+                    include("nav.php");
+                ?>
             </div>
             <div class="row">
-                <div class="col-sm-8 ">
-                    <ul class="navbar" id="navbar">
-                        <li><a href="main_page.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="joinus.html">Join Us</a></li>
-                        <li><a href="shop.html">Available Shops</a></li>
-                        <li><a href="promotion.html">Promotion</a></li>
-                    </ul>
-                </div>
+                <?php
+                    include("header.php");
+                ?>
                 <div> 
                     <form class="navbar-form navbar-right" role="search"> 
                         <div class="form-group"> 
@@ -49,8 +42,7 @@
                         <form class="login-form">
                             <input type="text" placeholder="username" name="uname" required/><br>
                             <input type="password" placeholder="password" name="psw" required/>
-                            <p class="text-center"><a href="#loginhome" class="btn btn-default" role="button">Login</a></p>
-                            <p class="text-center">Don't have an account? <a href="userform.html" class="btn btn-default" role="button">Register here.</a></p>
+                            <p class="text-center"><a href="main_page_admin.php" class="btn btn-default" role="button">Login</a></p>
                         </form>
                     </div> 
                 </div>
@@ -62,8 +54,8 @@
             </div>
         </div>
         <!-- jQuery - required for Bootstrap's Javascript plugins) -->
-        <script src="frameworks/js/jquery.min.js"></script>
+        <script src="../frameworks/js/jquery.min.js"></script>
         <!-- All Bootstrap plug-ins file-->
-        <script src="frameworks/js/bootstrap.min.js"></script>
+        <script src="../frameworks/js/bootstrap.min.js"></script>
     </body>
 </html>

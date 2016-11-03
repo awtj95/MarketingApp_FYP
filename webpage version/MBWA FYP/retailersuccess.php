@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Under Maintenance</title>
+        <title>Registration Successful</title>
         <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Bootstrap -->
         <link href="frameworks/css/bootstrap.min.css" rel="stylesheet" />
@@ -19,21 +19,14 @@
                 <div class="col-sm-9" id="banner">
                     <h1>Welcome to Samfah Marketing</h1>
                 </div>
-                <div class="col-sm-3">
-                    <a href="register.html"><input type="button" value="Register"></a>
-                    <a href="#login"><input type="button" value="Login"></a>
-                </div>
+                <?php
+                    include("nav.php");
+                ?>
             </div>
             <div class="row">
-                <div class="col-sm-8 ">
-                    <ul class="navbar" id="navbar">
-                        <li><a href="main_page.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="joinus.html">Join Us</a></li>
-                        <li><a href="shop.html">Available Shops</a></li>
-                        <li><a href="promotion.html">Promotion</a></li>
-                    </ul>
-                </div>
+                <?php
+                    include("header.php");
+                ?>
                 <div> 
                     <form class="navbar-form navbar-right" role="search"> 
                         <div class="form-group"> 
@@ -43,10 +36,11 @@
                     </form>
                 </div>
             </div>
-            <p align="center">Click Image back to main page</p>
             <div class="row">
-                <div class="col-sm-12">
-                    <a href="main_page.html"><img src="image/construction.jpg" alt="banner" id="banner" class="img-rounded" height="800" width="1080" /></a>
+                <div class="col-sm-12 jumbotron">
+                    <p class="text-center">Register Successful</p>
+                    <p class="text-center">Thank for register our retailer account, your register request we have received, we will process your request as soon as possiblem. If got many thing we will inform you by using email. Have a nice day!!!</p>
+                    <p class="text-center"><a href="main_page.php" class="btn btn-default" role="button">Back to Home</a></p>
                 </div>
             </div>
             <div class="row">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>User Main Page</title>
+        <title>Retailer Main Page</title>
         <meta name = "viewport" content="width=device-width, initial-scale=1.0" />
         <!-- Bootstrap -->
         <link href="../frameworks/css/bootstrap.min.css" rel="stylesheet" />
@@ -19,25 +19,14 @@
                 <div class="col-sm-8" id="banner">
                     <h1>Welcome to Samfah Marketing</h1>
                 </div>
-                <div class="col-sm-2">
-                    <font color="lightblue"><u><p align="right">Welcome, Kevin</p></u></font>
-                </div>
-                <div class="col-sm-2">
-                    <a href="../main_page.html"><input type="button" value="Logout"></a>
-                </div>
+                <?php
+                    include ("loginstatus.php")
+                ?>
             </div>
             <div class="row">
-                <div class="col-sm-9 ">
-                    <ul class="navbar" id="navbar">
-                        <li><a href="../main_page.html">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="shop.html">Available Shops</a></li>
-                        <li><a href="#promotion">Promotion</a></li>
-                        <li><a href="#Product">Product</a></li>
-                        <li><a href="#history">Purchase History</a></li>
-                        <li><a href="#notic">Notification</a></li>
-                    </ul>
-                </div>
+                <?php
+                    include("header.php");
+                ?>
                 <div clas="col-sm-3"> 
                     <form class="navbar-form navbar-right" role="search"> 
                         <div class="form-group"> 
